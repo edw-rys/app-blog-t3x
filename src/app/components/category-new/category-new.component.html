@@ -1,0 +1,15 @@
+<div class="md-12 mt-3">
+    <h1>{{page_title}}</h1>
+    <!-- Formulario de crear categoría -->
+    <form #categoryForm="ngForm" (ngSubmit)="onSubmit(categoryForm)" class="col-md-5">
+    	<div class="form-group">
+    		<label for="name">Nombre</label>
+    		<input class="form-control" name="name" #name="ngModel" [(ngModel)]="category.name" required>
+    		<small *ngIf="!name.valid && name.touched" class="invalid-feedback d-block">
+    			Nombre de la categoría no es válida
+    		</small>
+    	</div>
+    	<input class="btn btn-success" type="submit" value="Guardar" [disabled]="categoryForm.invalid">
+    </form>
+</div>
+<br>

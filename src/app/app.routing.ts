@@ -7,6 +7,8 @@ import { HomeComponent } from "./components/home/home.component";
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { LoginComponent } from "./components/login/login.component";
 import { SignupComponent } from "./components/signup/signup.component";
+import { UserEditComponent } from "./components/user-edit/user-edit.component";
+import { CategoryNewComponent } from "./components/category-new/category-new.component";
 // Definir las rutas
 const appRoutes : Routes =
     [
@@ -29,6 +31,14 @@ const appRoutes : Routes =
         {
             path        :'logout/:sure',
             component   :LoginComponent
+        },
+        {
+            path        :'setting',
+            component   :UserEditComponent
+        },
+        {
+            path        :'new-category',
+            component   :CategoryNewComponent
         },
         {
             path        :'**', // no existe
